@@ -39,11 +39,17 @@ const slugs = [
 
 export function FilterSection() {
     const [blogInfo, setBlogInfo] = useState()
+    const [size, setSize] = useState(0)
     const [posts, setPosts] = useState({
         posts: 52,
         reactions: 10,
         views: 12
     })
+    useEffect(() => {
+        if(window) {
+            setSize(window.innerWidth)
+        }
+    }, [window]);
     const getHashnodeDetails = () => {
         const query =
             `query {
@@ -106,7 +112,7 @@ export function FilterSection() {
                 me rant ?
             </h1>
             <IconCloud iconSlugs={slugs}/>
-            {window.screen.width > 768 && <BorderBeam size={250} duration={12} delay={9}/>}
+            {size > 768 && <BorderBeam size={250} duration={12} delay={9}/>}
         </div>
         <div className="flex flex-col w-full justify-between">
             {blogInfo && posts && <Card className="m-4 mb-4">
