@@ -106,7 +106,7 @@ export function FilterSection() {
                 me rant ?
             </h1>
             <IconCloud iconSlugs={slugs}/>
-            <BorderBeam size={250} duration={12} delay={9} />
+            {window.screen.width > 768 && <BorderBeam size={250} duration={12} delay={9}/>}
         </div>
         <div className="flex flex-col w-full justify-between">
             {blogInfo && posts && <Card className="m-4 mb-4">
