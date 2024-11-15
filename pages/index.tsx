@@ -14,10 +14,10 @@ export default function Home() {
             <SkillsSection/>
             <div className="max-w-[1440px] mx-auto">
                 <ExperienceSection/>
-                <FilterSection />
-                <GithubSection />
-                <ProjectSection />
-                <ContactSection />
+                <FilterSection/>
+                <GithubSection/>
+                <ProjectSection/>
+                <ContactSection/>
             </div>
         </>
     );
